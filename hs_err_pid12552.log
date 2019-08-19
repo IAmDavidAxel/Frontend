@@ -1,0 +1,211 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x000000005a1fa21c, pid=12552, tid=9160
+#
+# JRE version:  (10.0.1+10) (build )
+# Java VM: Java HotSpot(TM) 64-Bit Server VM (10.0.1+10, mixed mode, tiered, compressed oops, g1 gc, windows-amd64)
+# Problematic frame:
+# V  [jvm.dll+0x35a21c]
+#
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dclassworlds.conf=C:\Program Files (x86)\Maven\bin\m2.conf -Dmaven.home=C:\Program Files (x86)\Maven -Dmaven.multiModuleProjectDirectory=C:\Users\David\git\EasyCoiffure\src\main\afroCareApp org.codehaus.plexus.classworlds.launcher.Launcher clea install exec:java
+
+Host: Intel(R) Core(TM) i7-4700MQ CPU @ 2.40GHz, 8 cores, 7G,  Windows 10 , 64 bit Build 17134 (10.0.17134.648)
+Time: Wed Mar 13 17:07:40 2019 Est (heure d?été) elapsed time: 0 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00000203f58a8000):  JavaThread "Unknown thread" [_thread_in_vm, id=9160, stack(0x000000d505d00000,0x000000d505e00000)]
+
+Stack: [0x000000d505d00000,0x000000d505e00000],  sp=0x000000d505dff150,  free space=1020k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x35a21c]
+V  [jvm.dll+0x35a3a1]
+V  [jvm.dll+0x66de8a]
+V  [jvm.dll+0x6691d5]
+V  [jvm.dll+0x669080]
+V  [jvm.dll+0x668c8a]
+V  [jvm.dll+0x3604e9]
+V  [jvm.dll+0x351858]
+V  [jvm.dll+0x6859c2]
+V  [jvm.dll+0x3ba0a3]
+V  [jvm.dll+0x3bc201]
+C  [java.exe+0x3531]
+C  [java.exe+0xe1af]
+C  [java.exe+0xe356]
+C  [KERNEL32.DLL+0x13dc4]
+C  [ntdll.dll+0x73691]
+
+
+siginfo: EXCEPTION_ACCESS_VIOLATION (0xc0000005), reading address 0xffffffffffffffff
+
+
+Registers:
+RAX=0x000000d505dff170, RBX=0x000000005a8683c0, RCX=0x0000000059f6b57f, RDX=0x000000000000000a
+RSP=0x000000d505dff150, RBP=0x000000d505dff221, RSI=0x000000005a85e3c0, RDI=0x00000203f58a8b10
+R8 =0x000000d505dff1b0, R9 =0x0000000059ea0000, R10=0x0000000000000000, R11=0x000000d505dff168
+R12=0x000002038b2b8ce0, R13=0x000000005a585408, R14=0x0000000000000000, R15=0x000000005a585408
+RIP=0x000000005a1fa21c, EFLAGS=0x0000000000010202
+
+Top of Stack: (sp=0x000000d505dff150)
+0x000000d505dff150:   000000005a8683c0 0000000000000000
+0x000000d505dff160:   000000005a8683c0 000000d505dff221
+0x000000d505dff170:   000000005a594db8 0000000000000000
+0x000000d505dff180:   000000005a85e3c0 0000000000000000
+0x000000d505dff190:   0000000000000004 000000005a585400
+0x000000d505dff1a0:   000000005a85e3c0 000000d505dff770
+0x000000d505dff1b0:   0000000000000000 0000000059ea8910
+0x000000d505dff1c0:   000000000000000d ffffffffffffffff
+0x000000d505dff1d0:   00000001ffffffff 000000005a585408
+0x000000d505dff1e0:   0000000000000000 000000d505dff770
+0x000000d505dff1f0:   00000000ffffffff 0000000059ea8910
+0x000000d505dff200:   000000000000002e 0000000000000000
+0x000000d505dff210:   000000d505dff300 00000000000000d9
+0x000000d505dff220:   0000020300000003 0000000000000000
+0x000000d505dff230:   0000000000000000 ffffffffffffff00
+0x000000d505dff240:   00007b671911b4b6 000000005a585408 
+
+Instructions: (pc=0x000000005a1fa21c)
+0x000000005a1fa1fc:   41 83 e0 07 e8 2b 13 d7 ff 48 8b 15 4c 38 4b 00
+0x000000005a1fa20c:   4c 8d 45 8f 0f 10 44 24 20 0f 10 0c 24 30 48 8b
+0x000000005a1fa21c:   cf 0f 29 45 8f 0f 29 4d 9f 0f 10 44 24 40 f2 0f
+0x000000005a1fa22c:   10 4c 24 50 0f 29 45 af f2 0f 11 4d bf e8 c2 51 
+
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00000203f380d530, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+
+Other Threads:
+  0x00000203f58bc800 GCTaskThread "GC Thread#0" [stack: 0x000000d505e00000,0x000000d505f00000] [id=8316]
+  0x00000203f58be000 GCTaskThread "GC Thread#1" [stack: 0x000000d505f00000,0x000000d506000000] [id=8984]
+  0x00000203f58c1800 GCTaskThread "GC Thread#2" [stack: 0x000000d506000000,0x000000d506100000] [id=6552]
+  0x00000203f58c3800 GCTaskThread "GC Thread#3" [stack: 0x000000d506100000,0x000000d506200000] [id=8872]
+  0x00000203f58c5800 GCTaskThread "GC Thread#4" [stack: 0x000000d506200000,0x000000d506300000] [id=6400]
+  0x00000203f58cb000 GCTaskThread "GC Thread#5" [stack: 0x000000d506300000,0x000000d506400000] [id=9104]
+  0x00000203f58cd000 GCTaskThread "GC Thread#6" [stack: 0x000000d506400000,0x000000d506500000] [id=10688]
+  0x00000203f58cf000 GCTaskThread "GC Thread#7" [stack: 0x000000d506500000,0x000000d506600000] [id=11540]
+  0x00000203f5944000 ConcurrentGCThread "G1 Main Marker" [stack: 0x000000d506600000,0x000000d506700000] [id=5492]
+  0x00000203f5945000 ConcurrentGCThread "G1 Conc#0" [stack: 0x000000d506700000,0x000000d506800000] [id=8768]
+  0x00000203f5948800 ConcurrentGCThread "G1 Conc#1" [stack: 0x000000d506800000,0x000000d506900000] [id=5648]
+  0x00000203fd0fe800 ConcurrentGCThread "G1 Refine#0" [stack: 0x000000d506900000,0x000000d506a00000] [id=4352]
+  0x00000203fd0ff000 ConcurrentGCThread "G1 Refine#1" [stack: 0x000000d506a00000,0x000000d506b00000] [id=10828]
+  0x00000203fd103000 ConcurrentGCThread "G1 Refine#2" [stack: 0x000000d506b00000,0x000000d506c00000] [id=11428]
+  0x00000203fd106000 ConcurrentGCThread "G1 Refine#3" [stack: 0x000000d506c00000,0x000000d506d00000] [id=8600]
+  0x00000203fd107000 ConcurrentGCThread "G1 Refine#4" [stack: 0x000000d506d00000,0x000000d506e00000] [id=9828]
+  0x00000203fd108000 ConcurrentGCThread "G1 Refine#5" [stack: 0x000000d506e00000,0x000000d506f00000] [id=8376]
+  0x00000203fd112800 ConcurrentGCThread "G1 Refine#6" [stack: 0x000000d506f00000,0x000000d507000000] [id=7980]
+  0x00000203fd116800 ConcurrentGCThread "G1 Refine#7" [stack: 0x000000d507000000,0x000000d507100000] [id=8684]
+  0x00000203fd11d800 ConcurrentGCThread "G1 Young RemSet Sampling" [stack: 0x000000d507100000,0x000000d507200000] [id=10592]
+
+=>0x00000203f58a8000 (exited) JavaThread "Unknown thread" [_thread_in_vm, id=9160, stack(0x000000d505d00000,0x000000d505e00000)]
+
+Threads with active compile tasks:
+
+VM state:not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap address: 0x0000000081000000, size: 2032 MB, Compressed Oops mode: 32-bit
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 3
+Compressed class space size: 1073741824 Address: 0x0000000100000000
+
+GC Heap History (0 events):
+No events
+
+Deoptimization events (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff6f27e0000 - 0x00007ff6f281e000 	C:\Program Files\Java\jdk-10.0.1\bin\java.exe
+0x00007ffe40b00000 - 0x00007ffe40ce1000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe40030000 - 0x00007ffe400e2000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe3cef0000 - 0x00007ffe3d163000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe3e170000 - 0x00007ffe3e211000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe3e940000 - 0x00007ffe3e9de000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe408d0000 - 0x00007ffe4092b000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe3e670000 - 0x00007ffe3e794000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe3e340000 - 0x00007ffe3e4d0000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe3d4b0000 - 0x00007ffe3d4d0000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe3fe30000 - 0x00007ffe3fe58000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe3d550000 - 0x00007ffe3d6e2000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe3d170000 - 0x00007ffe3d20f000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe3de60000 - 0x00007ffe3df58000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe2bcf0000 - 0x00007ffe2bf59000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.648_none_fb45a0e93062a6d2\COMCTL32.dll
+0x00007ffe314e0000 - 0x00007ffe314ea000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe405a0000 - 0x00007ffe408c2000 	C:\WINDOWS\System32\combase.dll
+0x00007ffe3d4d0000 - 0x00007ffe3d54a000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe3e220000 - 0x00007ffe3e24d000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffdfe910000 - 0x00007ffdfe9ff000 	C:\Program Files\Java\jdk-10.0.1\bin\msvcr120.dll
+0x00007ffe03780000 - 0x00007ffe03826000 	C:\Program Files\Java\jdk-10.0.1\bin\msvcp120.dll
+0x0000000059ea0000 - 0x000000005a910000 	C:\Program Files\Java\jdk-10.0.1\bin\server\jvm.dll
+0x00007ffe3ffb0000 - 0x00007ffe3ffb8000 	C:\WINDOWS\System32\PSAPI.DLL
+0x00007ffe3a190000 - 0x00007ffe3a1b3000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe294c0000 - 0x00007ffe294c9000 	C:\WINDOWS\SYSTEM32\WSOCK32.dll
+0x00007ffe3ffc0000 - 0x00007ffe4002c000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe3a160000 - 0x00007ffe3a18a000 	C:\WINDOWS\SYSTEM32\winmmbase.dll
+0x00007ffe3cea0000 - 0x00007ffe3cee9000 	C:\WINDOWS\System32\cfgmgr32.dll
+0x00007ffe3c6b0000 - 0x00007ffe3c6bf000 	C:\Program Files\Java\jdk-10.0.1\bin\verify.dll
+0x00007ffe3c8d0000 - 0x00007ffe3ca99000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe3c670000 - 0x00007ffe3c699000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe04250000 - 0x00007ffe04277000 	C:\Program Files\Java\jdk-10.0.1\bin\java.dll
+0x00007ffe2bc50000 - 0x00007ffe2bc66000 	C:\Program Files\Java\jdk-10.0.1\bin\zip.dll
+0x00007ffe3c6a0000 - 0x00007ffe3c6aa000 	C:\Program Files\Java\jdk-10.0.1\bin\jimage.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Program Files\Java\jdk-10.0.1\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.17134.648_none_fb45a0e93062a6d2;C:\Program Files\Java\jdk-10.0.1\bin\server
+
+VM Arguments:
+jvm_args: -Dclassworlds.conf=C:\Program Files (x86)\Maven\bin\m2.conf -Dmaven.home=C:\Program Files (x86)\Maven -Dmaven.multiModuleProjectDirectory=C:\Users\David\git\EasyCoiffure\src\main\afroCareApp 
+java_command: org.codehaus.plexus.classworlds.launcher.Launcher clea install exec:java
+java_class_path (initial): C:\Program Files (x86)\Maven\boot\plexus-classworlds-2.5.2.jar
+Launcher Type: SUN_STANDARD
+
+Logging:
+Log output configuration:
+#0: stdout all=warning uptime,level,tags
+#1: stderr all=off uptime,level,tags
+
+Environment Variables:
+JAVA_HOME=C:\Program Files\Java\jdk-10.0.1
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\oraclexe\app\oracle\product\11.2.0\server\bin;C:\app\Axel\product\12.1.0\dbhome_1\bin;C:\app\david\product\12.1.0\dbhome_1\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\HP SimplePass\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files\Microsoft SQL Server\110\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\VSShell\Common7\IDE\;c:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;c:\Program Files (x86)\Microsoft SQL Server\100\DTS\Binn\;C:\Users\David\.dnx\bin;C:\Program Files\Microsoft DNX\Dnvm\;C:\Program Files (x86)\Microsoft SQL Server\Client SDK\ODBC\110\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\DTS\Binn\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\ManagementStudio\;C:\Program Files (x86)\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\120\DTS\Binn\;C:\WINDOWS\SysWOW64\WindowsPowerShell\v1.0\Modules\TShell\TShell\;C:\Program Files (x86)\Rational\common;C:\Program Files (x86)\Maven\bin;C:\Program Files (x86)\Yarn\bin;C:\Program Files\dotnet\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files\nodejs\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\NVIDIA Corporation\NVIDIA NvDLISR;C:\Program Files\Git\cmd;C:\Users\David\AppData\Local\Programs\Python\Python36\Scripts\;C:\Users\David\AppData\Local\Programs\Python\Python36\;C:\Users\David\AppData\Local\Programs\MiKTeX 2.9\miktex\bin\;C:\Users\David\AppData\Local\Microsoft\WindowsApps;C:\Users\David\AppData\Local\Yarn\bin;C:\Users\David\AppData\Roaming\npm;
+USERNAME=David
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 60 Stepping 3, GenuineIntel
+
+
+
+---------------  S Y S T E M  ---------------
+
+OS: Windows 10 , 64 bit Build 17134 (10.0.17134.648)
+
+CPU:total 8 (initial active 8) (4 cores per cpu, 2 threads per core) family 6 model 60 stepping 3, cmov, cx8, fxsr, mmx, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, avx, avx2, aes, clmul, erms, lzcnt, ht, tsc, tscinvbit, bmi1, bmi2, fma
+
+Memory: 4k page, physical 8319000k(3336232k free), swap 14348312k(7434172k free)
+
+vm_info: Java HotSpot(TM) 64-Bit Server VM (10.0.1+10) for windows-amd64 JRE (10.0.1+10), built on Mar 27 2018 02:27:48 by "mach5one" with MS VC++ 12.0 (VS2013)
+
+END.

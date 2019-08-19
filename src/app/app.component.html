@@ -1,0 +1,82 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<head>
+</head>
+
+<body >
+
+<div style="text-align:center" class="jumbotron">
+  <a routerLink="/">
+  <h1>
+    Welcome to {{ title }}!
+  </h1>
+  </a>
+</div>
+<div class="container-fluid">
+  <div class="row">
+<div class="col-lg-auto">
+  <nav class="navbar navbar-expand-xl sticky-top navbar-dark bg-dark" *ngIf="currentUser" >
+    <a class="navbar-brand" routerLink="/">Couronne Afro</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" routerLink="#">Home
+            <span class="sr-only">(current)</span>
+          </a>
+        </li>
+
+        <li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{currentUser.firstName}}
+            </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item"  (click)="logout()"> Se déconnecter </a>
+          <a class="dropdown-item"  routerLink="barberProfile"> Mon profil</a>
+        </div>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " routerLink="rendezVousTable" tabindex="-1" >Tableau de rendez vous</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-item link " routerLink="about" tabindex="-1">Devenir Coiffeuse</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-item link " routerLink="about" tabindex="-1">A Propos de nous</a>
+        </li>
+
+
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Recherché" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Recherché</button>
+      </form>
+    </div>
+  </nav>
+<app-alert></app-alert>
+<router-outlet></router-outlet>
+</div>
+</div>
+  <div class="row">
+    <div class="col-lg-auto">
+      <div class="blockquote-footer position-sticky">
+        <ul>
+          <li><a href="http://www.facebook.com">Facebook</a></li>
+          <li><a href="http://instagram.com">Instagram</a> </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+
+
